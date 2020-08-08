@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An Ruby on rails application for sharing movies across.
 
-Things you may want to cover:
+Has custom autherntication, can login/signup using same form! Just an try.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Once logged in user can share youtube movues and post on the wall
