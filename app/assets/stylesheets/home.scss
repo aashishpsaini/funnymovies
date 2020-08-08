@@ -1,0 +1,15 @@
+  .row{
+    display: flex;
+  }
+
+  .movie {
+    margin: 10%;
+    padding: 10px;
+    flex: 1;
+  }
+  
+  .movie-details {
+    margin-right: 10%;
+    padding: 10px;
+    flex: 1;
+  }
