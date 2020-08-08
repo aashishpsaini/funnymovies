@@ -1,0 +1,11 @@
+
+<%= form_for :movie, url: movies_share_path, method: :post do |form|%>
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :url, class: 'form-control', required: true %>
+  </div>
+  <div class="actions">
+    <%= form.submit  class: 'btn btn-primary' %>
+  </div>
+<% end %>
+

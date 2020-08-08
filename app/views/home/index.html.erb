@@ -1,0 +1,14 @@
+<div class="row">
+  <% @movies.each do |movie|%>
+    <div class="col-sm-5">
+      <%= content_tag(:iframe, '', src: url(movie), width: "90%", height: "90%", frameborder: 0) %>
+    </div>
+    <div class="col-sm-7">
+      <div class="row text-danger"> <%= movie.title %></div>
+      <div class="row"><%= "Shared by: #{movie.user.email}" %></div>
+      <div class="row">Description:</div>
+      <div class="row"><%= movie.description %></div>
+      <br>
+    </div>
+  <% end %>
+ 

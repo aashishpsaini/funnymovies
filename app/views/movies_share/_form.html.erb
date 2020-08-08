@@ -1,0 +1,25 @@
+
+<%= form_for movie, url: "/movies_share", method: :post do |form|%>
+  <% if movie.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+      <% movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="movie_div">
+    <fieldset class="scheduler-border">
+      <legend class="scheduler-border">Share a Youtube movie</legend>
+      <div class="form-group row">
+        <%= form.label :Youtube_URL, class: "col-sm-3 col-form-label" %>
+        <%= form.text_field :video_id, id: :url, class: "col-sm-9 form-control" %>
+      </div>
+      <div class="row">
+        <%= form.submit :Share, class: "center-block"%>  
+      </div>   
+    </fieldset>
+  </div>
+<% end %>
