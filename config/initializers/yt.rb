@@ -1,2 +1,2 @@
 
-Yt.configuration.api_key = "AIzaSyChmbqzJ9u36By1hVCyjw75Nc6pyRbzBo8"
+Yt.configuration.api_key = ENV['API_KEY']
