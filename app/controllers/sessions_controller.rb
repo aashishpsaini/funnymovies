@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password]) || (user = new_user.save)
+    if user && user.authenticate(params[:password]) || (user = new_user)
       session[:user_id] = user.id
       redirect_to root_url, notice: 'Logged in!'
     else
@@ -24,6 +24,6 @@ class SessionsController < ApplicationController
   end
 
   def new_user
-    User.new(email: params[:email], password_digest: password_digest)
+    User.create(email: params[:email], password_digest: password_digest)
   end
 end
